@@ -288,9 +288,10 @@ background-repeat: no-repeat;
     text-align: left;
     color: #c83f7a;
 
-    font-size: 17px;
-    line-height: 1.55;
-
+   font-family: Georgia, serif;
+   font-weight: 500;
+font-size: 20px;
+line-height: 1.45;
     overflow: hidden;
 }
 #couponScreen {
