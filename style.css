@@ -1,0 +1,388 @@
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+    color: #d63384;
+    font-size: 45px;
+    font-family: "Comic Sans MS", cursive;
+}
+    background: linear-gradiant(135deg, #fff5fa , #ffd6e8, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+
+    color: #d63384;
+    font-size: 45px;
+}
+p{
+    color: #f79aca;
+    font-size: 20px;
+}
+
+/*sparcles*/
+
+body::before{
+    content:"* + * + * + * + *";
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size:30px;
+    color: #f08bb5;
+    letter-spacing: 35px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+button {
+    font-size: 22px;
+    padding: 15px 30px;
+    margin-top: 20px;
+
+    background-color: #f79aca;
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+#rakhi {
+    display: none;
+    position: fixed;
+
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+#dogGlow {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 245, 170, 1) 0%,
+        rgba(255, 220, 80, 0.85) 20%,
+        rgba(255, 190, 30, 0.50) 42%,
+        rgba(255, 180, 20, 0.20) 62%,
+        transparent 78%
+    );
+
+    filter: blur(10px);
+    pointer-events: none;
+    z-index: 3;
+
+    animation: glowPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        opacity: 0.75;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+}
+.sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 5;
+
+    color: #FFD700;
+    text-shadow:
+        0 0 5px #FFD700,
+        0 0 10px #FFC107,
+        0 0 16px #FFB300;
+
+    animation: sparkleTwinkle 1.4s ease-in-out infinite alternate;
+}
+
+.sparkle.white {
+    color: white;
+    text-shadow:
+        0 0 5px white,
+        0 0 10px #FFD966,
+        0 0 16px #FFD700;
+}
+
+@keyframes sparkleTwinkle {
+    from {
+        opacity: 0.25;
+        transform: scale(0.6) rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.25) rotate(20deg);
+    }
+}
+#ghewar {
+    display: none;
+    position: fixed;
+
+    width: 525px;
+    height: auto;
+
+    left: 10%;
+    top: 76%;
+
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+#nextButton {
+    visibility: hidden;
+
+    position: fixed;
+    left: 50%;
+    bottom: 7%;
+    transform: translateX(-50%);
+
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+
+    background: #e79ac3;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+    z-index: 10;
+}
+#messageScreen {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("message-bg.png");
+background-size: 175% 175%;
+background-position: center;
+background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+}
+
+
+
+#paraNextButton {
+    position: fixed;
+    right: 12%;
+    bottom: 11%;
+
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+
+    background: #e79ac3;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    z-index: 25;
+}
+
+#messageScreen2 {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("message-bg.png");
+    background-size: 175% 175%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 30;
+}
+
+
+
+#paraNextButton2 {
+    position: fixed;
+    right: 12%;
+    bottom: 11%;
+
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+
+    background: #e79ac3;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    z-index: 35;
+}
+
+#messageScreen3 {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("message-bg.png");
+    background-size: 175% 175%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 40;
+}
+
+#message,
+#message2,
+#message3 {
+    position: fixed;
+
+    left: 15%;
+    right: 15%;
+    top: 20%;
+    bottom: 18%;
+
+    width: auto;
+    max-height: none;
+
+    margin: 0;
+    transform: none;
+
+    text-align: left;
+    color: #c83f7a;
+
+    font-size: 17px;
+    line-height: 1.55;
+
+    overflow: hidden;
+}
+#couponScreen {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff8fc;
+    z-index: 60;
+}
+#couponImage {
+    width: 1500px;
+    max-width: 130%;
+    height: auto;
+}
+
+#redeemButton {
+    position: fixed;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px;
+
+    background: #df8eb6;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+    z-index: 65;
+}
+
+#redeemedStamp {
+    display: none;
+}
+#couponNextButton {
+    position: fixed;
+    right: 10%;
+    bottom: 6%;
+
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+
+    background: #e79ac3;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    z-index: 55;
+}
+#redeemedStamp {
+    display: none;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) rotate(-12deg);
+
+    padding: 12px 25px;
+
+    border: 5px solid #c94f88;
+    border-radius: 12px;
+
+    color: #c94f88;
+    font-size: 48px;
+    font-weight: bold;
+
+    z-index: 70;
+
+    animation: stampPop 0.4s ease-out;
+}
+
+@keyframes stampPop {
+    from {
+        transform: translate(-50%, -50%) rotate(-12deg) scale(2);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-12deg) scale(1);
+        opacity: 1;
+    }
+}
